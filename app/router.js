@@ -6,10 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('artists', { path: '/api/artists' } );
-  this.route('albums', { path: '/api/albums' } );
-  this.route('comments', { path: '/api/comments' } );
-  this.route('cities', { path: '/api/cities' } );
+  this.route('api/artists');
+  this.route('api/albums');
+  this.route('api/comments');
+  this.route('api/cities');
 });
 
 export default Router;
