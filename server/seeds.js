@@ -17,6 +17,12 @@ module.exports = {
       return cities[city];
     }
 
+    function checkArtist(thisCity, artist) {
+      if(artist.based_in === thisCity.name) {
+        thisCity.artist_ids.push(artist.id);
+      }
+    }
+
     for(var i = 0; i < numberOfArtists; i++) {
       var artist = {
         name: faker.name.firstName() + ' ' + faker.name.lastName(),
@@ -56,6 +62,16 @@ module.exports = {
         album.comment_ids.push(comment.id);
       }
     });
+
+    cities.forEach(function(city) {
+      var thisCity = {
+        name: city,
+        artist_ids: []
+      };
+      thisCity = database.save('city', thisCity);
+      artists.forEach(function(artist) {
+        checkArtist(thisCity, artist);
+      });
+    });
   },
 };
-
