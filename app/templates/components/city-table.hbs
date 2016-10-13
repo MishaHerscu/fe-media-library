@@ -7,14 +7,16 @@
   </thead>
   <tbody>
     {{#each cities as |city|}}
-    <tr>
-      <td class="col-xs-2">{{city.name}}</td>
-      <td class="col-xs-10">
-        {{#each city.artists as |artist|}}
-          {{artist.name}}
-        {{/each}}
-      </td>
-    </tr>
+      {{#if city.name}}
+        <tr>
+          <td class="col-xs-2">{{city.name}}</td>
+          <td class="col-xs-10">
+            {{#each city.artists as |artist|}}
+              {{artist.name}}
+            {{/each}}
+          </td>
+        </tr>
+      {{/if}}
     {{/each}}
   </tbody>
 </table>
