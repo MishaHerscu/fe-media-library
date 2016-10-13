@@ -16,7 +16,7 @@
       <td class="col-xs-1">{{album.year}}</td>
       <td class="col-xs-1">{{album.total_sold}}</td>
       <td class="col-xs-4">
-        {{#each album.comments as |comment|}}
+        {{#each album.comment_ids as |comment|}}
           {{comment.message}},
         {{/each}}
       </td>

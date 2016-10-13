@@ -6,7 +6,7 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   founding_year: DS.attr('number'),
 
-  city: belongsTo('city'),
+  city_id: belongsTo('city'),
 
   album_ids: hasMany('album'),
 });

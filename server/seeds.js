@@ -2,9 +2,9 @@ var faker = require('faker');
 
 module.exports = {
   seed: function(database) {
-    var numberOfArtists = 100;
-    var albumsPerArtist = 20;
-    var commentsPerAlbum = 10;
+    var numberOfArtists = 20;
+    var albumsPerArtist = 5;
+    var commentsPerAlbum = 3;
     var cities = ['Chicago', 'New York', 'Los Angeles', 'Philadelphia', 'Denver', 'Miami', 'San Francisco', 'Seattle'];
     var city = -1;
 
@@ -39,7 +39,7 @@ module.exports = {
         var album = {
           artist_id: artist.id,
           name: faker.company.catchPhrase(),
-          year: faker.date.between(artist.founding_year, nowDate).year,
+          year: faker.date.between(artist.founding_year, nowDate).getFullYear(),
           total_sold: faker.random.number({min: 1000, max: 99999999}),
           comment_ids: []
         };
