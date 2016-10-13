@@ -2,9 +2,9 @@ var faker = require('faker');
 
 module.exports = {
   seed: function(database) {
-    var numberOfArtists = 100;
-    var albumsPerArtist = 20;
-    var commentsPerAlbum = 10;
+    var numberOfArtists = 20;
+    var albumsPerArtist = 10;
+    var commentsPerAlbum = 5;
     var cities = ['Chicago', 'New York', 'Los Angeles', 'Philadelphia', 'Denver', 'Miami', 'San Francisco', 'Seattle'];
     var cityObjectArray = [];
     var city_id = 1;
