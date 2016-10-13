@@ -6,6 +6,7 @@ module.exports = {
     var albumsPerArtist = 5;
     var commentsPerAlbum = 3;
     var cities = ['Chicago', 'New York', 'Los Angeles', 'Philadelphia', 'Denver', 'Miami', 'San Francisco', 'Seattle'];
+    var cityObjectArray = [];
     var city = -1;
 
     var artists = [];
@@ -14,20 +15,29 @@ module.exports = {
 
     function nextCity() {
       city = city + 1 >= cities.length ? 0 : city + 1;
-      return cities[city];
+      // return cities[city];
+      return city;
     }
 
-    function checkArtist(thisCity, artist) {
-      if(artist.based_in === thisCity.name) {
-        thisCity.artist_ids.push(artist.id);
+    function checkArtist(city, artist) {
+      if(artist.city_id === city.id) {
+        city.artist_ids.push(artist.id);
       }
     }
+
+    cities.forEach(function(city) {
+      var thisCity = {
+        name: city,
+        artist_ids: []
+      };
+      cityObjectArray.push(database.save('city', thisCity));
+    });
 
     for(var i = 0; i < numberOfArtists; i++) {
       var artist = {
         name: faker.name.firstName() + ' ' + faker.name.lastName(),
         album_ids: [],
-        based_in: nextCity(),
+        city_id: nextCity(),
         founding_year: faker.date.past(100).getFullYear()
       };
 
@@ -63,14 +73,9 @@ module.exports = {
       }
     });
 
-    cities.forEach(function(city) {
-      var thisCity = {
-        name: city,
-        artist_ids: []
-      };
-      thisCity = database.save('city', thisCity);
+    cityObjectArray.forEach(function(city) {
       artists.forEach(function(artist) {
-        checkArtist(thisCity, artist);
+        checkArtist(city, artist);
       });
     });
   },
