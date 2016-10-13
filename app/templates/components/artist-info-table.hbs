@@ -8,7 +8,6 @@
     </tr>
   </thead>
   <tbody>
-    {{#each artists as |artist|}}
     <tr>
       <td class="col-xs-2">
         {{#link-to "artists/info" artist}}{{artist.name}}{{/link-to}}
@@ -21,6 +20,5 @@
         {{/each}}
       </td>
     </tr>
-    {{/each}}
   </tbody>
 </table>
