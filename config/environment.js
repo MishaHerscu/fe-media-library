@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:4200/api',
     EmberENV: {
       EXTEND_PROTOTYPES: {
         Date: false,

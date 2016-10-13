@@ -7,7 +7,7 @@ export default DS.Model.extend({
   year: DS.attr('number'),
   total_sold: DS.attr('number'),
 
-  artist_id: belongsTo('api/artist'),
+  artist_id: belongsTo('artist'),
 
-  comment_ids: hasMany('api/comment'),
+  comment_ids: hasMany('comment'),
 });
