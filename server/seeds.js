@@ -7,16 +7,15 @@ module.exports = {
     var commentsPerAlbum = 3;
     var cities = ['Chicago', 'New York', 'Los Angeles', 'Philadelphia', 'Denver', 'Miami', 'San Francisco', 'Seattle'];
     var cityObjectArray = [];
-    var city = -1;
+    var city_id = 1;
 
     var artists = [];
     var albums = [];
     var nowDate = new Date();
 
     function nextCity() {
-      city = city + 1 >= cities.length ? 0 : city + 1;
-      // return cities[city];
-      return city;
+      city_id = city_id >= cities.length ? 1 : city_id + 1;
+      return city_id;
     }
 
     function checkArtist(city, artist) {
