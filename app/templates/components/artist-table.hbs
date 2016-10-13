@@ -11,9 +11,13 @@
     {{#each artists as |artist|}}
     <tr>
       <td class="col-xs-2">{{artist.name}}</td>
-      <td class="col-xs-2">{{artist.based_in.name}}</td>
+      <td class="col-xs-2">{{artist.based_in}}</td>
       <td class="col-xs-2">{{artist.founding_year}}</td>
-      <td class="col-xs-6">Albums</td>
+      <td class="col-xs-6">
+        {{#each artist.album_ids as |album|}}
+          {{album.name}},
+        {{/each}}
+      </td>
     </tr>
     {{/each}}
   </tbody>
