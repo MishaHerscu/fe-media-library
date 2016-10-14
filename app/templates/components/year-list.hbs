@@ -9,7 +9,7 @@
     {{#each years as |year|}}
       <tr>
         <td class="col-xs-2">
-          {{year.year}}
+          {{#link-to "year-albums" year.year}}{{year.year}}{{/link-to}}
         </td>
         <td class="col-xs-2">
           {{year.count}}

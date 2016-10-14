@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('comments/info', { path: 'comments/info/:comment_id' } );
   this.route('cities');
   this.route('cities/info', { path: 'cities/info/:city_id' } );
+  this.route('year-albums', { path: 'year-albums/:year' } );
 });
 
 export default Router;
