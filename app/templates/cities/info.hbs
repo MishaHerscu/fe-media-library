@@ -1,0 +1,9 @@
+<h2 class="page-title">{{model.name}}</h2>
+{{#link-to "cities"}}
+  <h4 class="page-title">View All Cities</h4>
+{{/link-to}}
+
+<br /><br />
+
+{{city-info-table
+  city=model}}

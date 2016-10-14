@@ -1,0 +1,9 @@
+<h2 class="page-title">{{model.message}}</h2>
+{{#link-to "comments"}}
+  <h4 class="page-title">View All Comments</h4>
+{{/link-to}}
+
+<br /><br />
+
+{{comment-info-table
+  comment=model}}

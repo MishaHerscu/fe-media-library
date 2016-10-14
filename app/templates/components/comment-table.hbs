@@ -3,7 +3,7 @@
     <tr>
       <th class="col-xs-2">Album</th>
       <th class="col-xs-2">Author</th>
-      <th class="col-xs-8">Message</th>
+      <th class="col-xs-6">Message</th>
     </tr>
   </thead>
   <tbody>
@@ -11,7 +11,9 @@
     <tr>
       <td class="col-xs-2">{{comment.album_id.name}}</td>
       <td class="col-xs-2">{{comment.author}}</td>
-      <td class="col-xs-8">{{comment.message}}</td>
+      <td class="col-xs-6">
+        {{#link-to "comments/info" comment}}{{album.message}}{{/link-to}}
+      </td>
     </tr>
     {{/each}}
   </tbody>

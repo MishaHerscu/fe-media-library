@@ -1,6 +1,10 @@
-<h2 class="page-title">{{model.name}}</h2>
+<h2 class="page-title">{{model.artist.name}}</h2>
+{{#link-to "artists"}}
+  <h4 class="page-title">View All Artists</h4>
+{{/link-to}}
 
 <br /><br />
 
 {{artist-info-table
-  artist=model}}
+  artist=model.artist
+  albums=model.albums}}
