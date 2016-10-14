@@ -10,7 +10,9 @@
   <tbody>
     {{#each albums as |album|}}
     <tr>
-      <td class="col-xs-3">{{album.name}}</td>
+      <td class="col-xs-3">
+        {{#link-to "albums/info" album.id}}{{album.name}}{{/link-to}}
+      </td>
       <td class="col-xs-1">{{album.year}}</td>
       <td class="col-xs-1">{{album.total_sold}}</td>
       <td class="col-xs-4">
