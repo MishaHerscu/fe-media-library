@@ -4,7 +4,6 @@
       <th class="col-xs-3">Name</th>
       <th class="col-xs-1">Year</th>
       <th class="col-xs-1">Total Sold</th>
-      <th class="col-xs-4">Comments</th>
     </tr>
   </thead>
   <tbody>
@@ -15,11 +14,6 @@
       </td>
       <td class="col-xs-1">{{album.year}}</td>
       <td class="col-xs-1">{{album.total_sold}}</td>
-      <td class="col-xs-4">
-        {{#each album.comment_ids as |comment|}}
-          {{comment.message}},
-        {{/each}}
-      </td>
     </tr>
     {{/each}}
   </tbody>

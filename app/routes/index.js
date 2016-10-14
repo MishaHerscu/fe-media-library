@@ -54,7 +54,7 @@ export default Ember.Route.extend({
       })
       .then((artists) => {
         return artists.toArray().sort((artistA, artistB) => {
-          return artistA.albumsSold - artistB.albumsSold;
+          return artistA.get('albumsSold') - artistB.get('albumsSold');
         }).reverse().slice(0,5);
       })
     });
