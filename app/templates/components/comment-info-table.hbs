@@ -1,1 +1,53 @@
-{{comment.message}}
+<div class="col-xs-12">
+  <hr>
+</div>
+
+<div class="col-xs-12">
+  <h4 style="text-align:left;">
+    Album
+  </h4>
+  <h5 class="col-xs-2" style="text-align:left;">
+    {{comment.album_id.name}}
+  </h5>
+</div>
+
+<br /><br />
+
+<div class="col-xs-12">
+  <h4 style="text-align:left;">
+    Author
+  </h4>
+  <h5 class="col-xs-2" style="text-align:left;">
+    {{comment.author}}
+  </h5>
+</div>
+
+<br /><br />
+
+<div class="col-xs-12">
+  <h4 style="text-align:left;">
+    Comment Text
+  </h4>
+  <h5 style="text-align:left;">
+    {{comment.message}}
+  </h5>
+</div>
+
+<br /><br />
+
+<div class="col-xs-12">
+  <br />
+  <hr>
+  <br />
+</div>
+
+<h4 style="text-align:left;">
+  We could theoretically could add extra data about the comment for this route.
+  An example would be information about the user who created that comment.
+</h4>
+
+<br /><br /><br />
+
+{{#link-to "comments"}}
+  <h4 class="page-title">View All Comments</h4>
+{{/link-to}}
