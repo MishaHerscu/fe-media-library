@@ -12,7 +12,7 @@
       <td class="col-xs-2">{{comment.album_id.name}}</td>
       <td class="col-xs-2">{{comment.author}}</td>
       <td class="col-xs-6">
-        {{#link-to "comments/info" comment}}{{album.message}}{{/link-to}}
+        {{#link-to "comments/info" comment.id}}{{album.message}}{{/link-to}}
       </td>
     </tr>
     {{/each}}

@@ -10,7 +10,7 @@
       {{#if city.name}}
         <tr>
           <td class="col-xs-2">
-            {{#link-to "cities/info" city}}{{city.name}}{{/link-to}}
+            {{#link-to "cities/info" city.id}}{{city.name}}{{/link-to}}
           </td>
           <td class="col-xs-8">
             {{#each city.artist_ids as |artist|}}

@@ -11,7 +11,7 @@
     {{#each artists as |artist|}}
     <tr>
       <td class="col-xs-2">
-        {{#link-to "artists/info" artist}}{{artist.name}}{{/link-to}}
+        {{#link-to "artists/info" artist.id}}{{artist.name}}{{/link-to}}
       </td>
       <td class="col-xs-2">{{artist.city_id.name}}</td>
       <td class="col-xs-2">{{artist.founding_year}}</td>
