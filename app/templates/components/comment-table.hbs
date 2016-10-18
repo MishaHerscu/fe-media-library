@@ -3,7 +3,8 @@
     <tr>
       <th class="col-xs-2">Album</th>
       <th class="col-xs-2">Author</th>
-      <th class="col-xs-6">Message</th>
+      <th class="col-xs-5">Message</th>
+      <th class="col-xs-1">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -11,8 +12,13 @@
     <tr>
       <td class="col-xs-2">{{comment.album_id.name}}</td>
       <td class="col-xs-2">{{comment.author}}</td>
-      <td class="col-xs-6">
+      <td class="col-xs-5">
         {{#link-to "comments/info" comment.id}}{{comment.message}}{{/link-to}}
+      </td>
+      <td class="col-xs-1">
+        <button class="btn btn-danger" {{action "delete" comment}}>
+          Delete
+        </button>
       </td>
     </tr>
     {{/each}}
