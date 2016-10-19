@@ -1,0 +1,23 @@
+<div class="col-xs-6">
+  {{comment-input
+  label="Name"
+  placeholderName="Name"
+  valueName=commentInfo.author}}
+</div>
+
+<br /><br />
+
+<div class="col-xs-12">
+  {{comment-input
+  label="Comment"
+  placeholderName="Comment"
+  valueName=commentInfo.message}}
+</div>
+
+<br /><br />
+
+<div class="col-xs-12 button-section">
+  <button type="button" class="btn btn-default" {{action "submit"}}>
+    Post
+  </button>
+</div>
